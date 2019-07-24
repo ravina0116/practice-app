@@ -1,0 +1,6 @@
+= link_to "create post",new_post_path
+
+- @posts.each do |post|
+  = post.post_name
+  = link_to "update post",edit_post_path(post.id)
+  = link_to "delete post",post_path(post.id), notice: "are you sure?", method: :delete
